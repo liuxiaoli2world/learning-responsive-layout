@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>bcf</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        border: 10px solid rebeccapurple;
+      }
+      .parent {
+        border: 10px solid darkblue;
+        /* width: 960px; */
+        margin: 20px;
+        background: gray;
+        /* font-size: 0;
+        line-height: 0; */
+
+        /* overflow: hidden; */
+      }
+      .son1,
+      .son2,
+      .son3,
+      .son4 {
+        width: 100px;
+        height: 200px;
+        /* display: inline-block; */
+        /* float: left; */
+        margin: 10px;
+      }
+      .son1 {
+        background: pink;
+      }
+      .son2 {
+        background: red;
+      }
+      .son3 {
+        background: blue;
+      }
+      .son4 {
+        background: green;
+      }
+      .brother {
+        width: 500px;
+        height: 300px;
+        background: yellow;
+      }
+      .clearfix:before,
+      .clearfix:after {
+        content: '';
+        display: table;
+      }
+      .clearfix:after {
+        clear: both;
+      }
+      .clearfix {
+        *zoom: 1;
+      }
+      /* .parent::after {
+        content: '.';
+        display: block;
+        visibility: hidden;
+        height: 0;
+        clear: both;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="son1"></div>
+      <div class="son2"></div>
+      <div class="son3"></div>
+      <div class="son4"></div>
+    </div>
+    <!-- <div class="brother"></div> -->
+  </body>
+</html>

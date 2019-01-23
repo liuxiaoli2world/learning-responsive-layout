@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="http-equiv" content="ie=edge" />
+  <title></title>
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    var $ = 123;
+  </script>
+  <script>
+    // 为了防止$和其它的库冲突，用下面的两种方法解决冲突，推荐第一种方法：
+    // 方法一，传入参数：
+    jQuery.noConflict();
+    jQuery(function($) {
+      $.each([1, 2, 3, 4, 5], function(index, value) {
+        console.log(index, value);
+      });
+    });
+  	// 方法二，更换标识符：
+    var $$ = jQuery.noConflict();
+    $$(function() {
+      $$.each([1, 2, 3, 4, 5], function(index, value) {
+        console.log(index, value);
+      });
+    });
+  </script>
+  <body>
+    <div></div>
+  </body>
+</html>
